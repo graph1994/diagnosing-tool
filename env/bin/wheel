@@ -1,4 +1,4 @@
-#!/Users/graphite/Applications/Projects/diagnosing_tool/env/bin/python3.5
+#!/Users/kgraff/Projects/diagnosing-tool/env/bin/python
 
 # -*- coding: utf-8 -*-
 import re

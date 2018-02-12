@@ -1,4 +1,4 @@
-#!/Users/graphite/Applications/Projects/diagnosing_tool/env/bin/python3.5
+#!/Users/kgraff/Projects/diagnosing-tool/env/bin/python
 from django.core import management
 
 if __name__ == "__main__":

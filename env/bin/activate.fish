@@ -36,7 +36,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/Users/graphite/Applications/Projects/diagnosing_tool/env"
+set -gx VIRTUAL_ENV "/Users/kgraff/Projects/diagnosing-tool/env"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH

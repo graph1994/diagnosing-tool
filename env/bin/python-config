@@ -1,4 +1,4 @@
-#!/Users/graphite/Applications/Projects/diagnosing_tool/env/bin/python
+#!/Users/kgraff/Projects/diagnosing-tool/env/bin/python
 
 import sys
 import getopt
