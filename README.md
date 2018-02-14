@@ -11,9 +11,12 @@ Backend:
 
 `python manage.py migrate`
 
+`python manage.py runscript import_data`
+
+You should see `---RUNNING IMPORT DATA SCRIPT---` in the terminal.
+
 `python manage.py runserver`
 
-`python manage.py runscript import_data`
 
 
 In a separate terminal navigate to diagnosing-tool-web:
@@ -23,4 +26,6 @@ Frontend:
 `yarn`
 
 `yarn start`
+
+Then open a browser and navigate to `http://localhost:3000/`
 
