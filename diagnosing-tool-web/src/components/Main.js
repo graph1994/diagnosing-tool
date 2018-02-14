@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { PageHeader, Grid, Col, Row, Well, Button } from 'react-bootstrap';
+import { PageHeader, Grid, Col, Row, Well, Button, Table } from 'react-bootstrap';
 import axios from 'axios';
 import { InputSymptom } from './Input';
 import { Result } from './Result';
@@ -45,7 +45,7 @@ export class Main extends Component {
         console.log('Updated frequency:', res.data)
         this.setState({updatedDiagnosis: res.data})
     }).then(response => {
-        console.log(JSON.stringify(response));
+        this.loadDiagnosisToState(this.state.selectedSymptomId);
     })
   }
 
@@ -85,10 +85,26 @@ export class Main extends Component {
                 }
                 {this.state.updatedDiagnosis &&
                   <Well>
-                  <h4> Diagnosis: {this.state.updatedDiagnosis.name}</h4>
-                  <h4> Frequency: {this.state.updatedDiagnosis.frequency}</h4>
-                  <p>Thanks for reporting! Would you like to restart? </p>
-                  <Button bsStyle='warning' onClick={this.resetState}>Restart</Button>
+                    <h4> Diagnosis: {this.state.updatedDiagnosis.name}</h4>
+                    <h4> Frequency: {this.state.updatedDiagnosis.frequency}</h4>
+
+                    <p>Thanks for reporting! Would you like to restart? </p>
+                    <Table responsive>
+                      <thead>
+                        <tr>
+                          <th>Name</th>
+                          <th>Freqeuncy</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {this.state.diagnoses.map(diagnosis =>  (
+                            <tr>
+                              <td>{diagnosis.name}</td>
+                              <td>{diagnosis.frequency}</td>
+                            </tr>
+                        ))}
+                      </tbody>
+                    </Table>
                   </Well>
                  }
                  <Button bsStyle='warning' onClick={this.resetState}>Restart</Button>

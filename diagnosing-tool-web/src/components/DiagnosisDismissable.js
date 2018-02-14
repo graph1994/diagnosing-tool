@@ -11,7 +11,8 @@ export class DiagnosisDismissable extends Component {
 
   static defaultProps = {
     diagnosis: {},
-  }
+  };
+
   constructor(props, context) {
     super(props, context);
     this.handleShow = this.handleShow.bind(this);
@@ -24,12 +25,12 @@ export class DiagnosisDismissable extends Component {
   handleWrongDiagnosis = () => {
     this.setState({ show: false });
     this.props.toggleWrongDiagnosis();
-  }
+  };
 
   handleUpdate = () => {
     this.props.updateDiagnosisFequency(this.props.diagnosis.id)
     this.setState({ show: false });
-  }
+  };
 
   handleShow() {
     this.setState({ show: true });
