@@ -5,6 +5,8 @@ Inorder to setup the application that following commands must be run:
 
 Backend:
 
+`virtualenv -p python3 env`
+
 `source env/bin/activate`
 
 `pip install -r requirements.txt`
