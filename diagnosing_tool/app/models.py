@@ -1,7 +1,5 @@
 from django.db import models
 
-# Create your models here.
-
 
 class Symptom(models.Model):
     feature = models.CharField(max_length=50)
